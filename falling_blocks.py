@@ -60,7 +60,7 @@ def run_game():
     stall=not(stall)
     if stall or score>100 or timer>300:
         for n in range(int(score/10+1)):
-            if random.randint(0,10) == 0:
+            if random.randint(0,10) == 0 and timer > 10:
                 spawn_enemy()
                 break
     for enemy in enemies:
