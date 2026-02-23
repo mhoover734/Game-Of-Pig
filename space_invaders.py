@@ -17,13 +17,14 @@ def make_enemy_sprite():
         "10111111101",
         "10100000101",
         "00011011000"]
-    h = len(pattern)
-    w = len(pattern[0])
+    h = len(pattern)*2
+    w = len(pattern[0])*2
     img = tk.PhotoImage(width=w, height=h)
+    color = "#"+str(random_bright_color())
     for y in range(h):
         for x in range(w):
-            if pattern[y][x] == "1":
-                img.put("#"+str(random_bright_color()), (x,y))
+            if pattern[y//2][x//2] == "1":
+                img.put(color, (x,y))
     return img
 def make_player_sprite():
     h=16
