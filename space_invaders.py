@@ -1,7 +1,7 @@
 import tkinter as tk
 import random
 
-WIDTH = 550
+WIDTH = 600
 HEIGHT = 400
 
 #Make sprites
